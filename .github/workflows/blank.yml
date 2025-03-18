@@ -111,4 +111,3 @@ jobs:
          -Dmule.artifact=$artifactName \
          -s .maven/settings.xml \
          -DskipTests \
-         -DskipDeploymentVerification="true"
