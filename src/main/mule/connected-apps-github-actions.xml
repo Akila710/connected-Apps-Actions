@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	"Message" : "Github Actions through Connected Apps"
+	"Message1" : "Github Actions through Connected Apps"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
