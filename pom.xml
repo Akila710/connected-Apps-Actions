@@ -15,6 +15,7 @@
 
 		<app.runtime>4.7.0</app.runtime>
 		<mule.maven.plugin.version>4.2.0</mule.maven.plugin.version>
+		<skipDeploymentVerification>true</skipDeploymentVerification>
 	</properties>
 
 	<build>
@@ -50,6 +51,13 @@
 						</integrations>
 					</cloudhub2Deployment>
 				</configuration>
+				<executions>
+        <execution>
+          <goals>
+            <goal>deploy</goal>
+          </goals>
+        </execution>
+      </executions>
 			</plugin>
 		</plugins>
 	</build>
