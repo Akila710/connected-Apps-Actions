@@ -32,26 +32,28 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudhub2Deployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<provider>MC</provider>
-						<environment>Sandbox</environment>
-						<target>Cloudhub-US-East-2</target>
-						<muleVersion>3.9.6</muleVersion>
-						<server>ca.anypoint.credentials</server>
-						<applicationName>connected-apps-github</applicationName>
-						<replicas>1</replicas>
-						<vCores>0.1</vCores>
-						<skipDeploymentVerification>${skipDeploymentVerification}</skipDeploymentVerification>
-						<integrations>
-							<services>
-								<objectStoreV2>
-									<enabled>true</enabled>
-								</objectStoreV2>
-							</services>
-						</integrations>
-					</cloudhub2Deployment>
-				</configuration>
+    <cloudhub2Deployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <provider>MC</provider>
+      <environment>Sandbox</environment>
+      <target>Cloudhub-US-East-2</target>
+      <muleVersion>4.4.0</muleVersion>
+      <username>ars_710</username>
+      <password>710@Anypoint</password>
+      <applicationName>Demo-Deploy-710</applicationName>
+      <replicas>1</replicas>
+      <vCores>1</vCores>
+      <deploymentSettings>
+        <http>
+          <inbound>
+            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+            <forwardSslSession>true</forwardSslSession>
+            <lastMileSecurity>true</lastMileSecurity>
+          </inbound>
+        </http>
+      </deploymentSettings>
+    </cloudhub2Deployment>
+  </configuration>
 				<executions>
                     <execution>
           <goals>
