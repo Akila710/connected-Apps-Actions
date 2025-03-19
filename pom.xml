@@ -54,19 +54,10 @@
 				</configuration>
 				<executions>
                     <execution>
-                        <id>validate</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>exchange-pre-deploy</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>deploy</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>exchange-deploy</goal>
-                        </goals>
-                    </execution>
+          <goals>
+            <goal>deploy</goal>
+          </goals>
+        </execution>
                 </executions>
                 <inherited>false</inherited>
 			</plugin>
