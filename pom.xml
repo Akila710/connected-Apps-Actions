@@ -29,7 +29,6 @@
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
   				<version>4.0.0-beta-3-SNAPSHOT</version>
-  				<packaging>maven-plugin</packaging>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
