@@ -44,9 +44,9 @@
       <replicas>1</replicas>
       <vCores>1</vCores>
       <deploymentSettings>
+	            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
         <http>
           <inbound>
-            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
             <forwardSslSession>true</forwardSslSession>
             <lastMileSecurity>true</lastMileSecurity>
           </inbound>
