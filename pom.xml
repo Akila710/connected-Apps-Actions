@@ -4,7 +4,7 @@
 
 	<groupId>5e24d110-fe62-437a-8758-9884782f2281</groupId>
 	<artifactId>connected-apps-github-actions</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>connected-apps-github-actions</name>
@@ -29,6 +29,7 @@
 				<extensions>true</extensions>
 				<configuration>
        				 <classifier>mule-application</classifier>
+				 <runtimeVersion>4.9.0</runtimeVersion>
        				 <cloudhub2Deployment>
             			<uri>https://anypoint.mulesoft.com</uri>
             			<provider>MC</provider>
@@ -36,8 +37,9 @@
             			<target>Cloudhub-US-East-2</target>
             			<server>Repository</server>
             			<applicationName>${project.artifactId}</applicationName>
-            			<releaseChannel>NONE</releaseChannel>
+            			<releaseChannel>EDGE</releaseChannel>
             			<replicas>1</replicas>
+			        <javaVersion>17</javaVersion>		 
             			<vCores>0.1</vCores>
             			<deploymentSettings>
                 			<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
