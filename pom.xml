@@ -10,9 +10,17 @@
 	<name>connected-apps-github-actions</name>
 
 	<properties>
+		<type>custom</type>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<<<<<<< HEAD
 		<mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
+=======
+
+		<app.runtime>4.7.0</app.runtime>
+		<mule.maven.plugin.version>3.8.6</mule.maven.plugin.version>
+		<skipDeploymentVerification>true</skipDeploymentVerification>
+>>>>>>> 0794859e1678594ce370997eecf73ed654efb4dc
 	</properties>
 
 	<build>
@@ -23,11 +31,16 @@
 				<version>3.1.0</version>
 			</plugin>
 			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+  				<version>4.0.0-beta-3-SNAPSHOT</version>
+			</plugin>
+			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+<<<<<<< HEAD
        				 <classifier>mule-application</classifier>
        				 <cloudhub2Deployment>
             			<uri>https://anypoint.mulesoft.com</uri>
@@ -44,6 +57,38 @@
             			</deploymentSettings>
         			</cloudhub2Deployment>
     			</configuration>
+=======
+    <cloudhub2Deployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <provider>MC</provider>
+      <environment>Sandbox</environment>
+      <target>Cloudhub-US-East-2</target>
+      <muleVersion>4.4.0</muleVersion>
+      <username>ars_710</username>
+      <password>710@Anypoint</password>
+      <applicationName>Demo-Deploy-710</applicationName>
+      <replicas>1</replicas>
+      <vCores>1</vCores>
+      <deploymentSettings>
+      <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+        <http>
+          <inbound>
+            <forwardSslSession>true</forwardSslSession>
+            <lastMileSecurity>true</lastMileSecurity>
+          </inbound>
+        </http>
+      </deploymentSettings>
+    </cloudhub2Deployment>
+  </configuration>
+				<executions>
+                    <execution>
+          <goals>
+            <goal>deploy</goal>
+          </goals>
+        </execution>
+                </executions>
+                <inherited>false</inherited>
+>>>>>>> 0794859e1678594ce370997eecf73ed654efb4dc
 			</plugin>
 		</plugins>
 	</build>
@@ -65,7 +110,7 @@
 
 	<repositories>
 		<repository>
-			<id>anypoint-exchange-v3</id>
+			<id>anypoint-exchange</id>
 			<name>Anypoint Exchange</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
@@ -75,6 +120,9 @@
 			<name>MuleSoft Releases Repository</name>
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
+			<snapshots>
+               			 <enabled>false</enabled>
+            		</snapshots>
 		</repository>
 		<repository>
     		<id>Repository</id>
@@ -96,12 +144,21 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<distributionManagement>
+<<<<<<< HEAD
     	<repository>
         	<id>Repository</id>
         	<name>Corporate Repository</name>
         	<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
         	<layout>default</layout>
     	</repository>
+=======
+		<repository>
+			<id>ca.anypoint.credentials</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/5e24d110-fe62-437a-8758-9884782f2281/maven</url>
+			<layout>default</layout>
+		</repository>
+>>>>>>> 0794859e1678594ce370997eecf73ed654efb4dc
 	</distributionManagement>
 
 </project>
