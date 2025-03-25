@@ -4,7 +4,7 @@
 
 	<groupId>5e24d110-fe62-437a-8758-9884782f2281</groupId>
 	<artifactId>connected-apps-github-actions</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>mule-application</packaging>
 
 	<name>connected-apps-github-actions</name>
